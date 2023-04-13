@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./html/admin.html">
+    <link rel="stylesheet" href="./html/admin-panel.html">
 </head>
 <body>
     <header class="headre__container">
@@ -29,6 +30,7 @@
             </ul>
         </div>
     </header>
+    
     <section class="banner__container">
         <img src="./img/arrow-point-to-right.svg" alt="" >
         <div class="info_box">
@@ -46,6 +48,53 @@
         </div>
         <img src="./img/arrow-point-to-rbanner.svg" alt="">
     </section>
+    <main class="container">
+        <span>
+          <h2>Check also</h2>
+          <input type="text" id="search" placeholder="search">
+        </span>
+        <div class="products">
+          <div class="products__card" id="apple-card">
+            <img src="./img/Apple-card.png" alt="">
+            <strong>Apple Card</strong>
+            <p>Free*</p>
+            <button class="apply" onclick="signIn()">Apply</button>
+          </div>
+        </div>
+         <!-- ! modal window -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Регистрация</h2>
+      <form>
+        <input type="text" id="name">
+        <input type="text" id="surname">
+        <input type="email" id="email">
+        <input type="number" id="number">
+        <button type="submit">sign in</button>
+      </form>
+    </div>
+  </div>
+  <!-- ! modal window -->
+  <footer>
+    <div class="links">
+      <h3>Follow Us</h3>
+      <p>We are always looking for new projects and collaborations.
+        Feel free to contact us.</p>
+      <nav class="navbar">
+        <a href="#"><img src="./img/facebook.png" alt="facebook"></a>
+        <a href="#"><img src="./img/twitter.png" alt="twitter"></a>
+        <a href="#"><img src="./img/instagram.png" alt="instagram"></a>
+      </nav>
+    </div>
+    <div class="contacts">
+      <h3>Contact Us</h3>
+      <p>One Apple Park Way <br>
+        Cupertino, CA 95014</p>
+      <b>(408) 996-1010</b>
+      <a href="#">support@apple.com</a>
+    </div>
+  </footer>
     <script src="./js/main.js"></script>
 </body>
 </html>

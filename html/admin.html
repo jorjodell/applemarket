@@ -11,95 +11,167 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <!-- <section>
-        <div class="main-form-container">
-          <div id="form_section" class="form-container">
-            <div class="login-form form-wraper ">
-              <div>
-                <div class="form-title">
-                  <h2>Login</h2>
-                </div>
-                <div class="input-group">
-                  <div class="box">
-                    <span>
-                      <input placeholder="Email" class="myInput" type="text" />
-                    </span>
-                  </div>
-                </div>
-                <div class="input-group">
-                  <div class="box">
-                    <span>
-                      <input placeholder="Password" class="myInput" type="text" />
-                    </span>
-                  </div>
-                </div>
-                <div class="action-button">
-                  <button>Login</button>
-                </div>
-              </div>
-            </div>
-            <div class="signUp-form form-wraper">
-              <div>
-                <div class="form-title">
-                  <h2>Sign Up</h2>
-                </div>
-                <div class="input-group">
-                  <div class="box">
-                    <span>
-                      <input placeholder="Email" class="myInput" type="text" />
-                    </span>
-                  </div>
-                </div>
-                <div style="margin-bottom: 0px;" class="input-group">
-                  <div class="box">
-                    <span>
-                      <input placeholder="Password" class="myInput" type="password" />
-                    </span>
-                  </div>
-                </div>
-                <div class="action-button">
-                  <button>Sign Up</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="multiple-btn" class="bg-btn-container">
-            <div class="action-button">
-              <button>Login</button>
-            </div>
-            <div class="action-button">
-              <button>Sign Up</button>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <meta charset="UTF-8">
-        <title>Админ-панель</title>
-      </head>
-      <body>
-        <h1>Вход в админ-панель</h1>
-        <form>
-          <label for="password">Пароль:</label>
-          <input type="password" id="password">
+    <div class="admin-page">
+        <form class="adminForm">
+          <label for="password">Введите пароль:</label>
+          <input type="password" id="password" name="password">
           <button type="submit">Войти</button>
         </form>
-        <script src=../admin.js></script>
-      </body>
-      </html>
+        <div class="main-page">
+          <section class="container searchInput">
+            <input id="inpSearch" type="text" placeholder="Поиск продукции" />
+            <button>search</button>
+          </section>
       
-      <!-- <script type="module" src="../js/firebase/app.js"></script>
-      <script type="module" src="../js/firebase/auth.js"></script>
-      <script type="module" src="../js/firebase/firestore.js"></script>
+          <section class="container add-block">
+            <h2>Магазин</h2>
+            <form>
+              <div class="allInputs">
+                <input placeholder="Имя продукта" type="text" id="inpName" class="inputs" />
+                <input
+                  placeholder="Изображение"
+                  type="url"
+                  id="inpImg"
+                  class="inputs"
+                />
+                <input
+                  placeholder="Описание"
+                  type="text"
+                  id="inpSkills"
+                  class="inputs"
+                />
+                <input
+                  placeholder="Цена"
+                  type="number"
+                  id="inpPrice"
+                  class="inputs"
+                />
+                <select
+                  style="height: 41px"
+                  id="inpName"
+                  class="inputs"
+                  name="select"
+                >
+                  <!--Supplement an id here instead of using 'name'-->
+                  <option value="value2">Macbook</option>
+                  <option value="value3">Ipad</option>
+                  <option value="value3">Airpods</option>
+                  <option value="value3">iphone</option>
+                </select>
+              </div>
+              <button id="btnCreate">Создать</button>
+            </form>
+          </section>
       
+          <!-- filter buttons made by adik  -->
+          <div class="filter_btns container">
+            <button class="filter_btn" id="btn1">Macbook</button>
+            <button class="filter_btn" id="btn2">Ipad</button>
+            <button class="filter_btn" id="btn3">Airpods</button>
+            <button class="filter_btn" id="btn4">iphone</button>
+            <button class="filter_btn" id="btn5">All</button>
+          </div>
+          <!-- filter buttons made by adik  -->
+      
+          <section class="container main-cards">
+            <div class="cards-container">
+              <!-- <div class="card-profile">
+                <img src="" alt="" />
+                <h4>lorem</h4>
+                <span>129</span>
+              </div> -->
+            </div>
+          </section>
+      
+          <!-- start card-block made by meerim (cards)-->
+          <div class="container cards-container"></div>
+      
+          <!-- start two buttons -->
+          <div class="container">
+            <div class="twobtn">
+              <button id="prevBtn" class="btn btnOne active"></button>
+              <button id="nextBtn" class="btn btnTwo">></button>
+      
+              <!-- need to link fontawesome...  -->
+              <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+              <!-- need to link fontawesome...  -->
+            </div>
+          </div>
+          <!-- start two buttons -->
+          <!-- end footer part made by sultan and marlen -->
+      
+          <!-- ? Start modal -->
+          <div id="modal">
+            <img
+              max-width="500px"
+              min-width="500px"
+              id="modalLeft"
+              src="../images/ben-eaton-L_kaTYIuu1o-unsplash 1.png"
+              alt="profPic"
+            />
+            <div id="modal-r">
+              <button id="closeBtn">X</button>
+              <div id="modalRight">
+                <h2>Name Surname</h2>
+                <h3>1000$</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A similique
+                  debitis ut error tempore dignissimos, odio quas sunt fugiat harum
+                  libero in rerum recusandae, modi nesciunt, numquam provident.
+                  Eligendi, labore?
+                </p>
+                <div id="btns">
+                  <button class="buyBtn">CALL ME</button>
+                  <button class="buyBtn">BUY ME</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ? Finish modal -->
+          <!-- ?  Start Edit modal -->
+          <div id="modal" class="editModal">
+            <button id="closeEditModal">X</button>
+            <!-- <div id="modal-r"> -->
+            <form id="editForm" class="formEdit">
+              <h1>Edit</h1>
+              <input
+                type="text"
+                placeholder="Имя"
+                class="editInps"
+                id="editInpName"
+              />
+              <input
+                type="url"
+                placeholder="Изображение"
+                class="editInps"
+                id="editInpImage"
+              />
+              <input
+                type="number"
+                placeholder="Номер телефона"
+                class="editInps"
+                id="editInpNumber"
+              />
+              <input
+                type="text"
+                placeholder="Описание"
+                class="editInps"
+                id="editInpDesc"
+              />
+              <input
+                type="number"
+                placeholder="Цена"
+                class="editInps"
+                id="editInpPrice"
+              />
+              <button type="submit">save changes</button>
+            </form>
+            <!-- </div> -->
+          </div>
+          <!-- ?  Finish Edit modal -->
 
-<script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js"></script>
-
-Add additional services that you want to use -->
-<!-- <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js"></script> -->
-
+        </div>
+      </div>
+        <script src="../js/admin.js"></script>
 </body>
 </html>
