@@ -88,7 +88,7 @@
 .allInputs {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 60%;
 }
 
 
@@ -135,16 +135,15 @@
 
 .filter_btns {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  margin: 3em auto 6em;
-}
-.filter_btn {
-  width: 180px;
+  padding-top: 30px;
   height: 50px;
   background-color: white;
-  border: 2px solid;
   transition: 0.3s;
+  width: 400px;
+  justify-content: space-between;
+}
+.filter_btns button {
+  padding: 0 20px;
 }
 .filter_btn:hover {
   background-color: black;

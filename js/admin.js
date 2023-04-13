@@ -7,13 +7,12 @@ formAdmin.addEventListener('submit', function(e) {
   const password = e.target.elements.password.value;
   const email = e.target.elements.email.value;
   if (email === 'suk@mail.ru' && password === 'password') {
-    adminPanel.style.display ="none";
-    main_container.style.display = "block";
-    e.preventDefault();
+    window.location.href = 'https://nneilom.github.io/applemarket/html/admin.html';
   } else {
     alert('Неверный пароль');
   }
 });
+
 
 
 // Сохраняем в переменные все инпуты для ввода данных и кнопку "Создать"
