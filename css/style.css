@@ -1,15 +1,26 @@
-* {
-  box-sizing: border-box;
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+     box-sizing: border-box;
+     /* overflow: hidden; */
+}
+a {
+     text-decoration: none;
+     color: inherit;
+}
+ul,
+ol,
+li {
+     list-style: none;
+}
+img {
+     vertical-align: top;
 }
 
-body {
-  background-color: #f4f4f4;
-}
-
-h1,
-h2,
-h3,
-h4,
 p {
   margin: 0;
 }
@@ -301,4 +312,225 @@ footer {
 
 .hide {
   display: none;
+}
+=======
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+body {
+    
+    width: 100vw;
+    height: 100vh;
+    line-height: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight:400;
+    background-color: #F4F4F4;
+}
+
+/* header */
+[class*="__container"] {
+    max-width: 91%;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+.header__wrapper{
+    display: flex;
+}
+.logo {
+    background-color: #fff;
+}
+.logo_box {
+    padding: 25px 60px;
+    background-color: white;
+    border-radius: 9px 0px 0px 9px;
+}
+.header-link {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    padding: 30px 10%;
+    background-color: #444444;
+    color: #fff;
+    border-radius: 0px 9px 9px 0px;
+    font-size: 16px;
+}
+.admin{
+ width: 20px;
+ height: 20px;
+}
+.admin_container{
+    padding-left: 40px;
+}
+
+/* header end */
+
+/* banner section */
+.banner__container{
+    display: flex;
+    margin-top: 30px;
+    background-color: #fff;
+}
+.info_box {
+    width: 60%;
+    padding-left: 60px;
+    padding-top: 45px;
+}
+.info_box h2 {
+    font-size: 46px;
+    font-weight: 700;
+    padding-bottom: 45px;
+}
+.img_box {
+    width: 40%;
+    padding: 0 15%;
+    background-color: #fff;
+
+}
+.info_box p{
+    font-size: 14px;
+    color: #515759;
+    padding: 5px 0;
+}
+.text{
+  width: 70%;
+  line-height: 120%;
+}
+.web_button button{
+    color: #1890FF;
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 20px;
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-left: 20px;
+ 
+}
+.web_button {
+    display: flex;
+    padding-bottom: 20px;
+}
+.main_button {
+    background-color:#1890FF;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    padding: 15px 60px ;
+    border-radius: 8px;
+}
+
+.banner__container img:first-child{
+    width: 4%;
+    padding-left: 30px;
+}
+
+.banner__container img:last-child {
+    padding-right: 30px;
+}
+#watch {
+    width: 300px;
+}
+
+/* banner section end */
+
+
+/* media */
+
+@media (max-width: 1000px) {
+    .header__wrapper {
+        display: block;
+    }
+    .header-link {
+        width: 100%;
+        border-radius: 0px 0px 9px 9px;
+    }
+    .logo_box{
+        border-radius: 9px 9px 0px 0px;
+        padding-left: 40%;
+    }
+
+#watch {
+    width: 250px;
+    height: 400px;
+}
+.banner__container img:first-child {
+    width: 6%;
+    padding-left: 30px;
+}
+.banner__container img:last-child {
+    width: 6%;
+    padding-right: 30px;
+}
+
+.info_box h2 {
+    font-size: 40px;
+}
+.img_box {
+    padding: 0;
+}
+.banner__container img:last-child {
+    padding-right: 30px;
+}
+}
+
+@media (max-width: 740px) {
+    .info_box h2 {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        width: 99%;
+    }
+    .info_box {
+        width: 90%;
+        padding-bottom: 40px;
+    }
+    .info_box p {
+        font-size: 13px;
+        color: #515759;
+        padding: 5px 0;
+        width: 99%;
+    }
+    #watch {
+        width: 250px;
+        height: 100%;
+    }
+    .banner__container img:first-child {
+        width: 8%;
+        padding-left: 30px;
+    }
+    .banner__container img:last-child {
+        width: 8%;
+        padding-right: 30px;
+    }
+    .main_button {
+        padding: 15px 30px;
+    }
+    .header-link {
+        display: flex;
+        flex-wrap: wrap;
+        height: 120px;
+    }
+    .web_button button {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+.banner__container {
+    flex-direction: column-reverse;
+}
+.img_box {
+    padding: 0 25%;
+}
+.header-link  li {
+    padding: 0 10px;
+}
+.banner__container img:first-child {
+  display: none;
+}
+.banner__container img:last-child {
+    display: none;
+}
 }
