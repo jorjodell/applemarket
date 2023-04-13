@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhone 14 Pro Max",
+      "price": "от $1120",
+      "image": "https://istore.kg/media/products/iphone-14-pro-finish-select-202209-6-7inch-spaceblack_Qjv0Azl_G8usfCd.webp",
+      "category": "phone"
+    },
+    {
+      "id": 2,
+      "title": "iPhone 14 Pro",
+      "price": " $1070",
+      "image": "https://istore.kg/media/products/iphone-14-pro-finish-select-202209-6-1inch-spaceblack_HXToe1H.webp",
+      "category": "phone"
+    },
+    {
+      "id": 3,
+      "title": "iPhone 14 Plus",
+      "price": "$940",
+      "image": "https://istore.kg/media/products/iphone-14-finish-select-202209-6-7inch-purple_YEoBvNE.webp",
+      "category": "phone"
+    },
+    {
+      "id": 4,
+      "title": "iPhone 14",
+      "price": "$800",
+      "image": "https://istore.kg/media/products/iphone-14-finish-select-202209-6-1inch-yellow_CHhzYsc.webp",
+      "category": "phone"
+    },
+    {
+      "id": 5,
+      "title": "iPhone 13 Pro Max",
+      "price": "$1100",
+      "image": "https://istore.kg/media/products/iphone-13-pro-max-green-select.webp",
+      "category": "phone"
+    },
+    {
+      "id": 6,
+      "title": "iPhone 13",
+      "price": "$760",
+      "image": "https://istore.kg/media/products/iphone-13-blue-select-2021_QT6ur4J.webp",
+      "category": "phone"
+    },
+    {
+      "id": 7,
+      "title": "iPhone 13 mini",
+      "price": "$720",
+      "image": "https://istore.kg/media/products/iphone-13-mini-green-select.webp",
+      "category": "phone"
+    },
+    {
+      "id": 8,
+      "title": "iPhone 12",
+      "price": "$650",
+      "image": "https://istore.kg/media/products/12-Black.webp",
+      "category": "phone"
+    },
+    {
+      "id": 9,
+      "title": "iPhone 11",
+      "price": "$490",
+      "image": "https://istore.kg/media/products/11-black_qdkqJZQ.webp",
+      "category": "phone"
+    },
+    {
+      "id": 9,
+      "title": "iPad Pro 12.9",
+      "price": "$1070",
+      "image": "https://istore.kg/media/products/ipad-pro-13-select-wifi-spacegray-202210.webp"
+    },
+    {
+      "id": 10,
+      "title": "iPad Pro 11",
+      "price": "$880",
+      "image": "https://istore.kg/media/products/ipad-pro-11-select-wifi-silver-202210.webp"
+    },
+    {
+      "id": 11,
+      "title": "iPad Pro 12.9",
+      "price": "$1000",
+      "image": "https://istore.kg/media/products/iPad-Pro-12-9-WiFi-Silver_TwRGhKz.webp"
+    },
+    {
+      "id": 12,
+      "title": "iPad Air 10.9",
+      "price": "$620",
+      "image": "https://istore.kg/media/products/ipad-air-select-wifi-spacegray-202203.webp"
+    },
+    {
+      "id": 13,
+      "title": "iPad 10.9",
+      "price": "$510",
+      "image": "https://istore.kg/media/products/ipad-2022-hero-blue-wifi-select.webp"
+    },
+    {
+      "id": 14,
+      "title": "iPad mini 8.3",
+      "price": "$500",
+      "image": "https://istore.kg/media/products/iPad-mini-WiFi-Purple.webp"
+    },
+    {
+      "id": 15,
+      "title": "iPad 10.2",
+      "price": "$350",
+      "image": "https://istore.kg/media/products/iPad-9-WiFi-Silver.webp"
+    },
+    {
+      "id": 16,
+      "title": "AirPods Max",
+      "price": "$600",
+      "image": "https://istore.kg/media/products/AirPods-Max-Blue.webp",
+      "category": "headphones"
+    },
+    {
+      "id": 17,
+      "title": "AirPods Pro (2nd generation)",
+      "price": "$245",
+      "image": "https://istore.kg/media/products/MQD83_AV2_LZdu7LV.webp",
+      "category": "headphones"
+    },
+    {
+      "id": 18,
+      "title": "AirPods Pro (1st generation)",
+      "price": "$199",
+      "image": "https://istore.kg/media/products/AirPods-Pro-1.webp",
+      "category": "headphones"
+    },
+    {
+      "id": 19,
+      "title": "AirPods (3rd generation)",
+      "price": "$190",
+      "image": "https://istore.kg/media/products/MME73_AV2_6BYTgDV.webp",
+      "category": "headphones"
+    },
+    {
+      "id": 20,
+      "title": "AirPods (2nd generation)",
+      "price": "$135",
+      "image": "https://istore.kg/media/products/AirPods-1.webp",
+      "category": "headphones"
+    }
+  ]
+}
