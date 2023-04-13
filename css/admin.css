@@ -1,367 +1,374 @@
-.admin-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .adminForm{
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .adminForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .admin-page input[type="password"] {
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .admin-page button[type="submit"] {
-    padding: 5px 10px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .admin-page .main-page {
-    display: none;
-  }
-  .add-block {
-    margin-top: 100px;
-  }
-  /* .main-cards {
-    margin-top: 200px;
-    margin-bottom: 130px;
-  } */
-  .cards-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .card-profile {
-    width: 350px;
-    height: 658px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .card-profile img {
-    width: 90%;
-    height: 65%;
-  }
-  
-  .card-profile h4 {
-    margin: 24px 0 7px 0;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-  }
-  
-  .card-profile span {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0.02em;
-    color: #998e78;
-    margin-bottom: 10px;
-  }
-  
-  .card {
-    text-align: center;
-    margin-top: 120px;
-    max-width: 300px;
-    width: 100%;
-    border-radius: 10px;
-    transition: 0.1s;
-  }
-  
-  .card img {
-    width: 100%;
-    border-radius: 5px;
-  }
-  .card-block {
-    display: flex;
-    justify-content: space-around;
-    /* margin-top: 0 auto; */
-  }
-  .card:hover {
-    cursor: pointer;
-    transform: scale(0.95);
-    background-color: rgb(219, 222, 222);
-  }
-  /* start style all inputs inside form */
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
-  
-  .allInputs {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .inputs {
-    width: 165px;
-    height: 35px;
-    background-color: white;
-    /* cursor: pointer; */
-    border: 2px solid rgb(0, 70, 0);
-    transition: 0.3s;
-    text-align: center;
-    border-radius: 5px;
-  }
-  
-  .inputs:hover {
-    transition: 0.1s;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  #btnCreate {
-    width: 170px;
-    height: 42px;
-    color: white;
-    cursor: pointer;
-    border: 2px solid hwb(120 0% 68%);
-    transition: 0.3s;
-    text-align: center;
-    align-self: flex-end;
-    border-radius: 5px;
-    background-color:#1890FF;
-  }
-  
-  #btnCreate:hover {
-    background-color: #94c0ee;
-    color: white;
-    transition: 0.3s;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  /* end style all inputs inside form */
-  
-  /* start style filter buttons */
-  
-  .filter_btns {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin: 3em auto 6em;
-  }
-  .filter_btn {
-    width: 180px;
-    height: 50px;
-    background-color: white;
-    border: 2px solid;
-    transition: 0.3s;
-  }
-  .filter_btn:hover {
-    background-color: black;
-    color: white;
-  }
-  /* end style filter buttons */
-  
-  .list {
-    font-weight: 500;
-    font-size: 17px;
-    color: #808080;
-  }
-  
-  .btn {
-    width: 41px;
-    height: 41px;
-    border: 2px solid black;
-    font-size: 20px;
-    transition: 0.2s;
-  }
-  
-  .btn:hover {
-    font-size: 25px;
-  }
-  
-  .active {
-    background-color: black;
-    color: white;
-  }
-  
-  .twobtn {
-    display: flex;
-    align-items: center;
-    margin: 2em 0;
-    justify-content: center;
-    gap: 1em;
-  }
-  
-  /* start search input style */
-  .searchInput {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-  }
-  .searchInput input {
-    width: 77%;
-    height: 45px;
-    border-radius: 5px;
-    border: 2px solid #007bff;
-    font-size: 1em;
-    transition: 0.3s;
-    padding-left: 1em;
-  }
-  
-  .searchInput input:hover {
-    font-size: 1.1em;
-  }
-  
-  .searchInput button {
-    height: 50px;
-    width: 20%;
-    font-size: 1em;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: 0.1s;
-  }
-  
-  .searchInput button:hover {
-    font-size: 1.1em;
-  }
-  /* end search input style */
-  
-  /* start modal */
-  body {
-    position: relative;
-    /* нужно onclick на модалку задать body  */
-  
-    /* background-color: rgba(0, 0, 0, 0.336); */
-  }
-  #modal {
-    display: none;
-    width: 1000px;
-    height: 700px;
-    max-width: 70%;
-    margin: 25px auto;
-    border: 1px solid #998e78;
-    position: fixed;
-    top: 8%;
-    left: 15%;
-    background-color: #fff;
-  }
-  
-  #modalLeft {
-    width: 50%;
-    height: 100%;
-  }
-  
-  #modal-r {
-    margin-top: 20px;
-  }
-  
-  #modalRight {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    padding-left: 64px;
-    padding-right: 60px;
-    margin-top: 30px;
-  }
-  
-  #modalRight h2 {
-    font-size: 55px;
-    margin: 0px;
-  }
-  
-  #modalRight h3 {
-    font-weight: 500;
-    font-size: 40px;
-    color: #998e78;
-    margin: 15px 0;
-  }
-  
-  #modalRight p {
-    margin-bottom: 80px;
-    font-size: 20px;
-  }
-  
-  #btns {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 60px;
-  }
-  
-  .buyBtn:hover {
-    background-color: #fff;
-    color: #6e9c9f;
-    border: 2px solid #6e9c9f;
-    transition: 0.3s;
-  }
-  
-  .buyBtn {
-    padding: 22px 50px;
-    background: #6e9c9f;
-    width: 180px;
-    height: 65px;
-    border: none;
-    border-radius: 10px;
-    color: white;
-  }
-  #closeBtn {
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: transparent;
-    width: 30px;
-    margin-left: 450px;
-    color: #4e3a14;
-  }
-  #icons {
-    display: flex;
-    justify-content: space-around;
-    align-self: center;
-    width: 250px;
-  }
-  #icons img {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .btnEdit {
+.add-block {
+  margin-top: 100px;
+}
+.form{
+  background-color: #fff;
+  width: 100%;
+}
+.main_container{
+  width: 90%;
+  margin: 0 auto;
+}
+/* .main-cards {
+  margin-top: 200px;
+  margin-bottom: 130px;
+} */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main_container{
+  display: none;
+}
+.formAdmin{
+  width: 30%;
+  margin: 20% auto;
+  display: flex;
+  flex-direction: column;
+}
+.card-profile {
+  width: 350px;
+  height: 658px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-profile img {
+  width: 90%;
+  height: 65%;
+}
+
+.card-profile h4 {
+  margin: 24px 0 7px 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+}
+
+.card-profile span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  color: #998e78;
+  margin-bottom: 10px;
+}
+
+
+.card {
+  text-align: center;
+  margin-top: 120px;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.card-block {
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 0 auto; */
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  background-color: rgb(219, 222, 222);
+}
+/* start style all inputs inside form */
+.shopForm {
+  display: flex;
+  gap: 1em;
+}
+
+.allInputs {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+
+.inputs {
+  width: 165px;
+  height: 35px;
+  background-color: white;
+  /* cursor: pointer; */
+  border: 2px solid rgb(0, 70, 0);
+  transition: 0.3s;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.inputs:hover {
+  transition: 0.1s;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#btnCreate {
+  width: 170px;
+  height: 42px;
+  color: white;
+  cursor: pointer;
+  border: 2px solid #1890FF;
+  transition: 0.3s;
+  text-align: center;
+  align-self: flex-end;
+  border-radius: 5px;
+  background-color:#1890FF;
+}
+
+#btnCreate:hover {
+  background-color:#1890FF;
+  color: white;
+  transition: 0.3s;
+  border-radius: 5px;
+  font-size: 1em;
+}
+/* end style all inputs inside form */
+
+/* start style filter buttons */
+
+.filter_btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin: 3em auto 6em;
+}
+.filter_btn {
+  width: 180px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid;
+  transition: 0.3s;
+}
+.filter_btn:hover {
+  background-color: black;
+  color: white;
+}
+/* end style filter buttons */
+
+.list {
+  font-weight: 500;
+  font-size: 17px;
+  color: #808080;
+}
+
+.btn {
+  width: 41px;
+  height: 41px;
+  border: 2px solid black;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  font-size: 25px;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.twobtn {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
+  justify-content: center;
+  gap: 1em;
+}
+
+/* start search input style */
+.searchInput {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.searchInput input {
+  width: 77%;
+  height: 45px;
+  border-radius: 5px;
+  border: 2px solid #1890FF;
+  font-size: 1em;
+  transition: 0.3s;
+  padding-left: 1em;
+}
+
+.searchInput input:hover {
+  font-size: 1.1em;
+}
+
+.searchInput button {
+  height: 50px;
+  width: 20%;
+  font-size: 1em;
+  background-color:#1890FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.searchInput button:hover {
+  font-size: 1.1em;
+}
+/* end search input style */
+
+/* start modal */
+body {
+  position: relative;
+  /* нужно onclick на модалку задать body  */
+
+  /* background-color: rgba(0, 0, 0, 0.336); */
+}
+#modal {
+  display: none;
+  width: 1000px;
+  height: 700px;
+  max-width: 70%;
+  margin: 25px auto;
+  border: 1px solid #998e78;
+  position: fixed;
+  top: 8%;
+  left: 15%;
+  background-color: #fff;
+}
+
+#modalLeft {
+  width: 50%;
+  height: 100%;
+}
+
+#modal-r {
+  margin-top: 20px;
+}
+
+#modalRight {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding-left: 64px;
+  padding-right: 60px;
+  margin-top: 30px;
+}
+
+#modalRight h2 {
+  font-size: 55px;
+  margin: 0px;
+}
+
+#modalRight h3 {
+  font-weight: 500;
+  font-size: 40px;
+  color: #998e78;
+  margin: 15px 0;
+}
+
+#modalRight p {
+  margin-bottom: 80px;
+  font-size: 20px;
+}
+
+#btns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.buyBtn:hover {
+  background-color: #fff;
+  color: #6e9c9f;
+  border: 2px solid #6e9c9f;
+  transition: 0.3s;
+}
+
+.buyBtn {
+  padding: 22px 50px;
+  background: #6e9c9f;
+  width: 180px;
+  height: 65px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+#closeBtn {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  width: 30px;
+  margin-left: 450px;
+  color: #4e3a14;
+}
+#icons {
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  width: 250px;
+}
+#icons img {
+  width: 35px;
+  height: 35px;
+}
+
+.btnEdit {
+  width: 40%;
+  height: 5%;
+  border: 2px solid black;
+}
+.formEdit {
+  /* display: flex; */
+  margin: auto;
+  /* width: 100%; */
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+#closeEditModal {
+  height: 5%;
+  width: 5%;
+}
+.editModal {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 40%;
+}
+.editInps {
+  width: 300px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#delete{
+  height: 40px;
+  width: 40%;
+  font-size: 14px;
+  background-color: #1890FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+#edit{
+    height: 40px;
     width: 40%;
-    height: 5%;
-    border: 2px solid black;
-  }
-  .formEdit {
-    /* display: flex; */
-    margin: auto;
-    /* width: 100%; */
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-  }
-  #closeEditModal {
-    height: 5%;
-    width: 5%;
-  }
-  .editModal {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 40%;
-  }
-  .editInps {
-    width: 300px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-  
+    font-size: 14px;
+    background-color: #1890FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+.btnBlock{
+  width: 200px;
+  padding-left: 40px;
+}

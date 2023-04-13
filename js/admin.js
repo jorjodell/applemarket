@@ -1,18 +1,33 @@
-
-
-const formAdmin= document.querySelector('form');
-const mainPage = document.querySelector('.main-page')
+const formAdmin = document.querySelector('form');
+const adminPanel = document.querySelector('.adminPanel');
+const main_container = document.querySelector('.main_container');
 
 formAdmin.addEventListener('submit', function(e) {
   e.preventDefault();
   const password = e.target.elements.password.value;
-  if (password === 'password') {
-    formAdmin.style.display ="none"
-    mainPage.style.display = "block"
+  const email = e.target.elements.email.value;
+  if (email === 'suk@mail.ru' && password === 'password') {
+    adminPanel.style.display ="none";
+    main_container.style.display = "block";
+    e.preventDefault();
   } else {
     alert('Неверный пароль');
   }
 });
+
+formAdmin.addEventListener('click', function() {
+  // код здесь
+});
+let isEventHandled = false;
+
+document.querySelector('#myButton').addEventListener('click', function() {
+  if (!isEventHandled) {
+    isEventHandled = true;
+    // код здесь
+  }
+});
+
+
 
 // Сохраняем в переменные все инпуты для ввода данных и кнопку "Создать"
 let inpName = document.getElementById("inpName");
@@ -48,7 +63,6 @@ form.addEventListener("submit", (e) => {
   if (
     !inpName.value.trim() ||
     !inpImg.value.trim() ||
-    !inpNumber.value.trim() ||
     !inpSkills.value.trim() ||
     !inpPrice.value.trim()
   ) {
@@ -58,10 +72,9 @@ form.addEventListener("submit", (e) => {
 
   //   Создаём новый объект и туда добавляем значения наших инпутов
   let newProfile = {
-    name: inpName.value,
+    title: inpName.title,
     image: inpImg.value,
-    number: inpNumber.value,
-    skills: inpSkills.value,
+    category: inpSkills.category,
     price: inpPrice.value,
   };
   createProfile(newProfile);
@@ -83,6 +96,9 @@ async function createProfile(objProf) {
   inputs.forEach((elem) => {
     elem.value = "";
   });
+  btnCreate.addEventListener("click", (e) => {
+    e.preventDefault
+  })
 }
 
 // Read - отображение данных
@@ -100,9 +116,11 @@ async function readProfile(search = "") {
     <div class="card-profile">
           <img src="${elem.image}" alt="${elem.title}" onclick="showDetailsModal(${elem.id})"/>
           <h4>${elem.title}</h4>
-          <span>${elem.price}</span>
-          <button onclick="deleteProfile(${elem.id})">delete</button>
-          <button onclick="showModalEdit(${elem.id})">edit</button>
+          <span>$${elem.price}</span>
+          <div class= "btnBlock">
+          <button id="delete" onclick="deleteProfile(${elem.id})">delete</button>
+          <button id="edit" onclick="showModalEdit(${elem.id})">edit</button>
+          </div>
         </div>
     `;
   });
@@ -136,10 +154,9 @@ async function showModalEdit(id) {
   let res = await fetch(`${API}/${id}`);
   let data = await res.json();
   console.log(data);
-  editInpName.value = data.name;
+  editInpName.value = data.title;
   editInpImage.value = data.image;
-  editInpNumber.value = data.number;
-  editInpDesc.value = data.skills;
+  editInpDesc.value = data.category;
   editInpPrice.value = data.price;
   btnSave.setAttribute("id", data.id);
 }
@@ -147,10 +164,9 @@ async function showModalEdit(id) {
 editForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let editedProfile = {
-    name: editInpName.value,
+    title: editInpName.value,
     image: editInpImage.value,
-    number: editInpNumber.value,
-    skills: editInpDesc.value,
+    category: editInpDesc.value,
     price: editInpPrice.value,
   };
   console.log(btnSave.id);
@@ -186,20 +202,41 @@ async function showDetailsModal(id) {
   // console.log(data);
   // console.log(detailsImage.src);
   detailsImage.src = data.image;
-  detailsName.innerText = data.name;
+  detailsName.innerText = data.title;
   detailsPrice.innerText = data.price;
-  detailsSkills.innerText = data.skills;
+  detailsSkills.innerText = data.category;
 }
 
-closeBtnDetailsModal.addEventListener("click", () => {
-  detailsModal.style.display = "none";
-});
+// closeBtnDetailsModal.addEventListener("click", () => {
+//   detailsModal.style.display = "none";
+// });
 
 // ! ============== Seacrh =============
-inpSearch.addEventListener("input", (e) => {
-  // console.log(e.target.value);
-  // searchValue = e.target.value;
-  readProfile(e.target.value);
+inpSearch.addEventListener("input", () => {
+  cardsContainer.innerHTML =''
+  fetch(API).then(res => res.json()).then(data => {
+    data.filter((item) => item.title.toLowerCase().includes(inpSearch.value.toLowerCase()))
+    .forEach((elem) => {
+      if(inpSearch.value.trim() != '') {
+        cardsContainer.innerHTML += `
+      <div class="card-profile">
+          <img src="${elem.image}" alt="${elem.title}" onclick="showDetailsModal(${elem.id})"/>
+          <h4>${elem.title}</h4>
+          <span>$${elem.price}</span>
+          <div class= "btnBlock">
+          <button id="delete" onclick="deleteProfile(${elem.id})">delete</button>
+          <button id="edit" onclick="showModalEdit(${elem.id})">edit</button>
+          </div>
+        </div>
+      `
+      prevBtn.style.display = 'none'
+      nextBtn.style.display = 'none'
+      } else {
+        prevBtn.style.display = 'block'
+      nextBtn.style.display = 'block'
+      }
+    })
+  })
 });
 
 // ! ================= Pagination ==========
@@ -231,4 +268,3 @@ categoryBtns.forEach((elem) => {
     readProfile();
   });
 });
-

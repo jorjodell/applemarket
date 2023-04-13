@@ -294,7 +294,7 @@ span h2 {
   margin: 40px 140px;
 }
 
-#apple-card img {
+.products__card:first-child img {
   margin-bottom: 34px;
 }
 
@@ -549,8 +549,4 @@ footer {
   .navbar {
     column-gap: 15px;
   }
-}
-
-.hide {
-  display: none;
 }

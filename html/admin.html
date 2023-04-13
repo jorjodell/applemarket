@@ -11,167 +11,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div class="admin-page">
-        <form class="adminForm">
-          <label for="password">Введите пароль:</label>
-          <input type="password" id="password" name="password">
-          <button type="submit">Войти</button>
-        </form>
-        <div class="main-page">
-          <section class="container searchInput">
-            <input id="inpSearch" type="text" placeholder="Поиск продукции" />
-            <button>search</button>
-          </section>
-      
-          <section class="container add-block">
-            <h2>Магазин</h2>
-            <form>
-              <div class="allInputs">
-                <input placeholder="Имя продукта" type="text" id="inpName" class="inputs" />
-                <input
-                  placeholder="Изображение"
-                  type="url"
-                  id="inpImg"
-                  class="inputs"
-                />
-                <input
-                  placeholder="Описание"
-                  type="text"
-                  id="inpSkills"
-                  class="inputs"
-                />
-                <input
-                  placeholder="Цена"
-                  type="number"
-                  id="inpPrice"
-                  class="inputs"
-                />
-                <select
-                  style="height: 41px"
-                  id="inpName"
-                  class="inputs"
-                  name="select"
-                >
-                  <!--Supplement an id here instead of using 'name'-->
-                  <option value="value2">Macbook</option>
-                  <option value="value3">Ipad</option>
-                  <option value="value3">Airpods</option>
-                  <option value="value3">iphone</option>
-                </select>
-              </div>
-              <button id="btnCreate">Создать</button>
-            </form>
-          </section>
-      
-          <!-- filter buttons made by adik  -->
-          <div class="filter_btns container">
-            <button class="filter_btn" id="btn1">Macbook</button>
-            <button class="filter_btn" id="btn2">Ipad</button>
-            <button class="filter_btn" id="btn3">Airpods</button>
-            <button class="filter_btn" id="btn4">iphone</button>
-            <button class="filter_btn" id="btn5">All</button>
-          </div>
-          <!-- filter buttons made by adik  -->
-      
-          <section class="container main-cards">
-            <div class="cards-container">
-              <!-- <div class="card-profile">
-                <img src="" alt="" />
-                <h4>lorem</h4>
-                <span>129</span>
-              </div> -->
-            </div>
-          </section>
-      
-          <!-- start card-block made by meerim (cards)-->
-          <div class="container cards-container"></div>
-      
-          <!-- start two buttons -->
-          <div class="container">
-            <div class="twobtn">
-              <button id="prevBtn" class="btn btnOne active"></button>
-              <button id="nextBtn" class="btn btnTwo">></button>
-      
-              <!-- need to link fontawesome...  -->
-              <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
-              <!-- need to link fontawesome...  -->
-            </div>
-          </div>
-          <!-- start two buttons -->
-          <!-- end footer part made by sultan and marlen -->
-      
-          <!-- ? Start modal -->
-          <div id="modal">
-            <img
-              max-width="500px"
-              min-width="500px"
-              id="modalLeft"
-              src="../images/ben-eaton-L_kaTYIuu1o-unsplash 1.png"
-              alt="profPic"
-            />
-            <div id="modal-r">
-              <button id="closeBtn">X</button>
-              <div id="modalRight">
-                <h2>Name Surname</h2>
-                <h3>1000$</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A similique
-                  debitis ut error tempore dignissimos, odio quas sunt fugiat harum
-                  libero in rerum recusandae, modi nesciunt, numquam provident.
-                  Eligendi, labore?
-                </p>
-                <div id="btns">
-                  <button class="buyBtn">CALL ME</button>
-                  <button class="buyBtn">BUY ME</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ? Finish modal -->
-          <!-- ?  Start Edit modal -->
-          <div id="modal" class="editModal">
-            <button id="closeEditModal">X</button>
-            <!-- <div id="modal-r"> -->
-            <form id="editForm" class="formEdit">
-              <h1>Edit</h1>
-              <input
-                type="text"
-                placeholder="Имя"
-                class="editInps"
-                id="editInpName"
-              />
-              <input
-                type="url"
-                placeholder="Изображение"
-                class="editInps"
-                id="editInpImage"
-              />
-              <input
-                type="number"
-                placeholder="Номер телефона"
-                class="editInps"
-                id="editInpNumber"
-              />
-              <input
-                type="text"
-                placeholder="Описание"
-                class="editInps"
-                id="editInpDesc"
-              />
-              <input
-                type="number"
-                placeholder="Цена"
-                class="editInps"
-                id="editInpPrice"
-              />
-              <button type="submit">save changes</button>
-            </form>
-            <!-- </div> -->
-          </div>
-          <!-- ?  Finish Edit modal -->
+<div class="main_container">
+  <section class="container searchInput">
+    <input id="inpSearch" type="text" placeholder="Поиск продукта" />
+    <button>search</button>
+  </section>
 
-        </div>
+  <section class="container add-block">
+    <h2>Магазин</h2>
+    <form class="shopForm">
+      <div class="allInputs">
+        <input placeholder="Имя" type="text" id="inpName" class="inputs" />
+        <input
+          placeholder="Изображение"
+          type="url"
+          id="inpImg"
+          class="inputs"
+        />
+        <input
+          placeholder="Описание"
+          type="text"
+          id="inpSkills"
+          class="inputs"
+        />
+        <input
+          placeholder="Цена"
+          type="number"
+          id="inpPrice"
+          class="inputs"
+        />
       </div>
+      <button id="btnCreate">Создать</button>
+    </form>
+  </section>
+  <div class="filter_btns container">
+    <button class="filter_btn" id="btn1">headphones</button>
+    <button class="filter_btn" id="btn2">phone</button>
+    <button class="filter_btn" id="btn3">ipad</button>
+    <button class="filter_btn" id="btn5">Все</button>
+  </div>
+
+  <section class="container main-cards">
+    <div class="cards-container">
+      <!-- <div class="card-profile">
+        <img src="" alt="" />
+        <h4>lorem</h4>
+        <span>129</span>
+      </div> -->
+    </div>
+  </section>
+  <div class="container cards-container"></div>
+
+  <!-- start two buttons -->
+  <div class="container">
+    <div class="twobtn">
+      <button id="prevBtn" class="btn btnOne active"></button>
+      <button id="nextBtn" class="btn btnTwo">></button>
+    </div>
+  </div>
+  <!-- start two buttons -->
+  <!-- ?  Start Edit modal -->
+  <div id="modal" class="editModal">
+    <button id="closeEditModal">X</button>
+    <!-- <div id="modal-r"> -->
+    <form id="editForm" class="formEdit">
+      <h1>Edit</h1>
+      <input
+        type="text"
+        placeholder="Имя"
+        class="editInps"
+        id="editInpName"
+      />
+      <input
+        type="url"
+        placeholder="Изображение"
+        class="editInps"
+        id="editInpImage"
+      />
+      <input
+        type="number"
+        placeholder="Номер телефона"
+        class="editInps"
+        id="editInpNumber"
+      />
+      <input
+        type="text"
+        placeholder="Описание"
+        class="editInps"
+        id="editInpDesc"
+      />
+      <input
+        type="number"
+        placeholder="Цена"
+        class="editInps"
+        id="editInpPrice"
+      />
+      <button type="submit">save changes</button>
+    </form>
+  </div>
+</div>
+  <!-- ?  Finish Edit modal -->
         <script src="../js/admin.js"></script>
 </body>
 </html>

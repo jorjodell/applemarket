@@ -8,9 +8,8 @@ let inpNumber = document.querySelector('#number')
 let btn = document.querySelector('form button')
 let modal = document.getElementById("myModal")
 let span = document.getElementsByClassName("close")[0]
-let appleCard = document.querySelector('#apple-card')
+let produxtaCard = document.getElementsByClassName("products__card")
 
-console.log(appleCard)
 async function getCards() {
   let res = await fetch(url)
   let data = await res.json()
@@ -58,14 +57,22 @@ function signIn() {
 span.onclick = function() {
   modal.style.display = "none";
 }
-console.log(appleCard);
 
-btn.addEventListener('click', ()=> {
-  if(inpEmail.value.trim() != '' && inpName.value.trim() != '' && inpNumber.value.trim() != '' && inpSurname.value.trim() != '') {
-    appleCard.style.display = 'none'
+
+btn.addEventListener('click', (e)=> {
+  e.preventDefault()
+  if(inpEmail.value.trim() != '' || inpName.value.trim() != '' || inpNumber.value.trim() != '' || inpSurname.value.trim() != '') {
+    produxtaCard[0].style.display = 'none'
     modal.style.display = 'none'
     alert("Вы получили дисконтную карту Apple")
   } else {
     alert('Заполните все поля')
   }
+  fetch('http://localhost:8000/users', {
+    method: "POST",
+    headers: {
+      "Content-type" : "application/json"
+    },
+    body: JSON.stringify({name: inpName.value, surname: inpSurname.value, email: inpEmail.value, number: inpNumber.value})
+  })
 })
