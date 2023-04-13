@@ -8,9 +8,11 @@ let inpNumber = document.querySelector('#number')
 let btn = document.querySelector('form button')
 let modal = document.getElementById("myModal")
 let span = document.getElementsByClassName("close")[0]
-let appleCard = document.querySelector('#apple-card')
+let produxtaCard = document.getElementsByClassName("products__card")
+let select = document.querySelector('.filter-cards')
+let esc = document.querySelector('.close')
 
-console.log(appleCard)
+
 async function getCards() {
   let res = await fetch(url)
   let data = await res.json()
@@ -27,6 +29,25 @@ async function getCards() {
   })
 }
 getCards()
+
+select.addEventListener('change', ()=> {
+  products.innerHTML = ''
+  fetch(url).then(res => res.json()).then(data => {
+    data.forEach((elem) => {
+      if((select.value == 'iphone' && elem.category == 'phone') || (select.value == 'ipads' && elem.category == 'ipad') || (select.value == 'airpods' && elem.category == 'headphones') || (select.value == 'All')) {
+        products.innerHTML += 
+    `
+    <div class="products__card">
+        <img src="${elem.image}" width="170">
+        <strong>${elem.title}</strong>
+        <p>${elem.price}</p>
+        <button>Buy</button>
+      </div>
+    `
+      }
+    }) 
+  })
+})
 
 search.addEventListener("input", ()=> {
   const inp = search.value.toLowerCase()
@@ -58,14 +79,29 @@ function signIn() {
 span.onclick = function() {
   modal.style.display = "none";
 }
-console.log(appleCard);
 
-btn.addEventListener('click', ()=> {
-  if(inpEmail.value.trim() != '' && inpName.value.trim() != '' && inpNumber.value.trim() != '' && inpSurname.value.trim() != '') {
-    appleCard.style.display = 'none'
+
+btn.addEventListener('click', (e)=> {
+  e.preventDefault()
+btn.addEventListener('click', ()=> { 
+  if(inpEmail.value.trim() != '' || inpName.value.trim() != '' || inpNumber.value.trim() != '' || inpSurname.value.trim() != '') {
+    produxtaCard[0].style.display = 'none'
     modal.style.display = 'none'
     alert("Вы получили дисконтную карту Apple")
   } else {
     alert('Заполните все поля')
   }
+  fetch('http://localhost:8000/users', {
+    method: "POST",
+    headers: {
+      "Content-type" : "application/json"
+    },
+    body: JSON.stringify({name: inpName.value, surname: inpSurname.value, email: inpEmail.value, number: inpNumber.value})
+  })
 })
+})
+
+esc.addEventListener("click",(e)=> {
+  modal.style.display = "none";
+})
+
