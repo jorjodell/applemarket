@@ -140,5 +140,14 @@
       "image": "https://istore.kg/media/products/AirPods-1.webp",
       "category": "headphones"
     }
+  ],
+  "users": [
+    {
+      "name": "Ырысбек",
+      "surname": " Джороев",
+      "email": "yrysjoro@gmail.com",
+      "number": "0702917186",
+      "id": 1
+    }
   ]
 }
