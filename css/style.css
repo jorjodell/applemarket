@@ -45,6 +45,7 @@ span h2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
+  row-gap: 30px;
   margin: 40px 140px;
 }
 
@@ -212,6 +213,10 @@ footer {
 }
 
 @media (max-width: 426px) {
+  span {
+    flex-direction: column;
+  }
+
   #search {
     width: 200px;
     margin: 20px 0 0 15%;
