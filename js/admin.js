@@ -15,19 +15,6 @@ formAdmin.addEventListener('submit', function(e) {
   }
 });
 
-formAdmin.addEventListener('click', function() {
-  // код здесь
-});
-let isEventHandled = false;
-
-document.querySelector('#myButton').addEventListener('click', function() {
-  if (!isEventHandled) {
-    isEventHandled = true;
-    // код здесь
-  }
-});
-
-
 
 // Сохраняем в переменные все инпуты для ввода данных и кнопку "Создать"
 let inpName = document.getElementById("inpName");

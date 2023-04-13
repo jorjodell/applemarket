@@ -1,6 +1,27 @@
 {
   "products": [
     {
+      "id": 1,
+      "title": "iPhone 14 Pro Max",
+      "price": "1120",
+      "image": "https://istore.kg/media/products/iphone-14-pro-finish-select-202209-6-7inch-spaceblack_Qjv0Azl_G8usfCd.webp",
+      "category": "phone"
+    },
+    {
+      "id": 2,
+      "title": "iPhone 14 Pro",
+      "price": " 1070",
+      "image": "https://istore.kg/media/products/iphone-14-pro-finish-select-202209-6-1inch-spaceblack_HXToe1H.webp",
+      "category": "phone"
+    },
+    {
+      "id": 3,
+      "title": "iPhone 14 Plus",
+      "price": "940",
+      "image": "https://istore.kg/media/products/iphone-14-finish-select-202209-6-7inch-purple_YEoBvNE.webp",
+      "category": "phone"
+    },
+    {
       "id": 4,
       "title": "iPhone 14",
       "price": "800",

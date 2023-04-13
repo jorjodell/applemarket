@@ -275,6 +275,17 @@ span h2 {
   line-height: 29px;
 }
 
+.filter {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.filter-cards {
+  height: 30px;
+  border-radius: 7px;
+}
+
 #search {
   /* display: none; */
   border: 1px solid black;
@@ -294,7 +305,7 @@ span h2 {
   margin: 40px 140px;
 }
 
-.products__card:first-child img {
+.apple-card img {
   margin-bottom: 34px;
 }
 
