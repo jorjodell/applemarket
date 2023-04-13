@@ -104,3 +104,4 @@ btn.addEventListener('click', ()=> {
 esc.addEventListener("click",(e)=> {
   modal.style.display = "none";
 })
+
