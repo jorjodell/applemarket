@@ -219,7 +219,7 @@ inpSearch.addEventListener("input", () => {
       nextBtn.style.display = 'none'
       } else {
         prevBtn.style.display = 'block'
-      nextBtn.style.display = 'block'
+        nextBtn.style.display = 'block'
       }
     })
   })
@@ -237,19 +237,27 @@ prevBtn.addEventListener("click", () => {
   if (currentPage <= 1) return;
   currentPage--;
   readProfile();
+  prevBtn.classList.remove("active");
+  nextBtn.classList.add("active"); 
 });
 
 nextBtn.addEventListener("click", () => {
   if (currentPage >= pageLength) return;
   currentPage++;
   readProfile();
+  nextBtn.classList.remove("active");
+  prevBtn.classList.add("active"); 
 });
 
 // ! ============== FILTER ===============
-// console.log(categoryBtns);
 categoryBtns.forEach((elem) => {
   elem.addEventListener("click", () => {
-    // console.log(elem.innerText);
+    categoryBtns.forEach((btn) => {
+      btn.classList.remove("btnActive");
+
+    });
+    elem.classList.add("btnActive");
+
     filterValue = elem.innerText;
     readProfile();
   });

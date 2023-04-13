@@ -10,6 +10,8 @@ let modal = document.getElementById("myModal")
 let span = document.getElementsByClassName("close")[0]
 let produxtaCard = document.getElementsByClassName("products__card")
 let select = document.querySelector('.filter-cards')
+let esc = document.querySelector('.close')
+
 
 async function getCards() {
   let res = await fetch(url)
@@ -97,4 +99,8 @@ btn.addEventListener('click', ()=> {
     body: JSON.stringify({name: inpName.value, surname: inpSurname.value, email: inpEmail.value, number: inpNumber.value})
   })
 })
+})
+
+esc.addEventListener("click",(e)=> {
+  modal.style.display = "none";
 })

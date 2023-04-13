@@ -10,7 +10,7 @@
     {
       "id": 2,
       "title": "iPhone 14 Pro",
-      "price": " 1070",
+      "price": "1070",
       "image": "https://istore.kg/media/products/iphone-14-pro-finish-select-202209-6-1inch-spaceblack_HXToe1H.webp",
       "category": "phone"
     },
@@ -26,6 +26,20 @@
       "title": "iPhone 14",
       "price": "800",
       "image": "https://istore.kg/media/products/iphone-14-finish-select-202209-6-1inch-yellow_CHhzYsc.webp",
+      "category": "phone"
+    },
+    {
+      "id": 5,
+      "title": "iPhone 13 Pro Max",
+      "price": "$1100",
+      "image": "https://istore.kg/media/products/iphone-13-pro-max-green-select.webp",
+      "category": "phone"
+    },
+    {
+      "id": 6,
+      "title": "iPhone 13",
+      "price": "760",
+      "image": "https://istore.kg/media/products/iphone-13-blue-select-2021_QT6ur4J.webp",
       "category": "phone"
     },
     {
@@ -106,6 +120,13 @@
       "category": "headphones"
     },
     {
+      "id": 17,
+      "title": "AirPods Pro (2nd generation)",
+      "price": "245",
+      "image": "https://istore.kg/media/products/MQD83_AV2_LZdu7LV.webp",
+      "category": "headphones"
+    },
+    {
       "id": 18,
       "title": "AirPods Pro (1st generation)",
       "price": "199",
@@ -115,7 +136,7 @@
     {
       "id": 19,
       "title": "AirPods (3rd generation)",
-      "price": "200",
+      "price": "190",
       "image": "https://istore.kg/media/products/MME73_AV2_6BYTgDV.webp",
       "category": "headphones"
     },
@@ -125,6 +146,12 @@
       "price": "135",
       "image": "https://istore.kg/media/products/AirPods-1.webp",
       "category": "headphones"
+    },
+    {
+      "title": "",
+      "image": "https://static-cse.canva.com/blob/847064/29.jpg",
+      "price": "67",
+      "id": 21
     }
   ],
   "users": [
@@ -134,13 +161,6 @@
       "email": "yrysjoro@gmail.com",
       "number": "0702917186",
       "id": 1
-    },
-    {
-      "name": "Nilom",
-      "surname": "ferfr",
-      "email": "nil.porvani@gmail.com",
-      "number": "234234234",
-      "id": 2
     }
   ]
 }

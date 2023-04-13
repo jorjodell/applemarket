@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../html/admin.html">
 </head>
 <body>
+  <h2><a href="../index.html">Вернуться на главную</a></h2>
 <div class="main_container">
   <section class="container searchInput">
     <input id="inpSearch" type="text" placeholder="Поиск продукта" />
@@ -46,7 +47,7 @@
     </form>
   </section>
   <div class="filter_btns container">
-    <button class="filter_btn" id="btn1">headphones</button>
+    <button class="filter_btn btnActive" id="btn1">headphones</button>
     <button class="filter_btn" id="btn2">phone</button>
     <button class="filter_btn" id="btn3">ipad</button>
     <button class="filter_btn" id="btn5">Все</button>
@@ -66,10 +67,11 @@
   <!-- start two buttons -->
   <div class="container">
     <div class="twobtn">
-      <button id="prevBtn" class="btn btnOne active"></button>
-      <button id="nextBtn" class="btn btnTwo">></button>
+      <button id="prevBtn" class="btn btnOne active">	&#9668;</button>
+      <button id="nextBtn" class="btn btnTwo">&#9658;</button>
     </div>
   </div>
+  
   <!-- start two buttons -->
   <!-- ?  Start Edit modal -->
   <div id="modal" class="editModal">

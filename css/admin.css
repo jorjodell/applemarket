@@ -97,7 +97,7 @@
   height: 35px;
   background-color: white;
   /* cursor: pointer; */
-  border: 2px solid rgb(0, 70, 0);
+  border: 2px solid rgb(1, 1, 1);
   transition: 0.3s;
   text-align: center;
   border-radius: 5px;
@@ -132,23 +132,29 @@
 /* end style all inputs inside form */
 
 /* start style filter buttons */
-
+.btnActive{
+  background-color: #4f68a7;
+  color: #fff;
+}
 .filter_btns {
   display: flex;
   padding-top: 30px;
   height: 50px;
   background-color: white;
   transition: 0.3s;
-  width: 400px;
+  width: 770px;
   justify-content: space-between;
 }
 .filter_btns button {
   padding: 0 20px;
+  width: 165px;
+  height: 35px;
+  border: 2px solid rgb(9, 9, 9);
+  transition: 0.3s;
+  text-align: center;
+  border-radius: 5px;
 }
-.filter_btn:hover {
-  background-color: black;
-  color: white;
-}
+
 /* end style filter buttons */
 
 .list {
@@ -170,8 +176,8 @@
 }
 
 .active {
-  background-color: black;
-  color: white;
+  background-color: rgb(253, 253, 253); 
+  color: #fff; 
 }
 
 .twobtn {
