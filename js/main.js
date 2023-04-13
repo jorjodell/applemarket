@@ -9,6 +9,7 @@ let btn = document.querySelector('form button')
 let modal = document.getElementById("myModal")
 let span = document.getElementsByClassName("close")[0]
 let produxtaCard = document.getElementsByClassName("products__card")
+let select = document.querySelector('.filter-cards')
 
 async function getCards() {
   let res = await fetch(url)
@@ -26,6 +27,25 @@ async function getCards() {
   })
 }
 getCards()
+
+select.addEventListener('change', ()=> {
+  products.innerHTML = ''
+  fetch(url).then(res => res.json()).then(data => {
+    data.forEach((elem) => {
+      if((select.value == 'iphone' && elem.category == 'phone') || (select.value == 'ipads' && elem.category == 'ipad') || (select.value == 'airpods' && elem.category == 'headphones') || (select.value == 'All')) {
+        products.innerHTML += 
+    `
+    <div class="products__card">
+        <img src="${elem.image}" width="170">
+        <strong>${elem.title}</strong>
+        <p>${elem.price}</p>
+        <button>Buy</button>
+      </div>
+    `
+      }
+    }) 
+  })
+})
 
 search.addEventListener("input", ()=> {
   const inp = search.value.toLowerCase()
@@ -59,7 +79,7 @@ span.onclick = function() {
 }
 
 
-btn.addEventListener('click', ()=> {
+btn.addEventListener('click', ()=> { 
   if(inpEmail.value.trim() != '' || inpName.value.trim() != '' || inpNumber.value.trim() != '' || inpSurname.value.trim() != '') {
     produxtaCard[0].style.display = 'none'
     modal.style.display = 'none'

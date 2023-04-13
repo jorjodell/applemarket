@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "iPhone 14 Pro Max",
-      "price": "от $1120",
+      "price": "$1120",
       "image": "https://istore.kg/media/products/iphone-14-pro-finish-select-202209-6-7inch-spaceblack_Qjv0Azl_G8usfCd.webp",
       "category": "phone"
     },
@@ -67,43 +67,50 @@
       "id": 9,
       "title": "iPad Pro 12.9",
       "price": "$1070",
-      "image": "https://istore.kg/media/products/ipad-pro-13-select-wifi-spacegray-202210.webp"
+      "image": "https://istore.kg/media/products/ipad-pro-13-select-wifi-spacegray-202210.webp",
+      "category": "ipad"
     },
     {
       "id": 10,
       "title": "iPad Pro 11",
       "price": "$880",
-      "image": "https://istore.kg/media/products/ipad-pro-11-select-wifi-silver-202210.webp"
+      "image": "https://istore.kg/media/products/ipad-pro-11-select-wifi-silver-202210.webp",
+      "category": "ipad"
     },
     {
       "id": 11,
       "title": "iPad Pro 12.9",
       "price": "$1000",
-      "image": "https://istore.kg/media/products/iPad-Pro-12-9-WiFi-Silver_TwRGhKz.webp"
+      "image": "https://istore.kg/media/products/iPad-Pro-12-9-WiFi-Silver_TwRGhKz.webp",
+      "category": "ipad"
     },
     {
       "id": 12,
       "title": "iPad Air 10.9",
       "price": "$620",
-      "image": "https://istore.kg/media/products/ipad-air-select-wifi-spacegray-202203.webp"
+      "image": "https://istore.kg/media/products/ipad-air-select-wifi-spacegray-202203.webp",
+      "category": "ipad"
     },
     {
       "id": 13,
       "title": "iPad 10.9",
       "price": "$510",
-      "image": "https://istore.kg/media/products/ipad-2022-hero-blue-wifi-select.webp"
+      "image": "https://istore.kg/media/products/ipad-2022-hero-blue-wifi-select.webp",
+      "category": "ipad"
     },
     {
       "id": 14,
       "title": "iPad mini 8.3",
       "price": "$500",
-      "image": "https://istore.kg/media/products/iPad-mini-WiFi-Purple.webp"
+      "image": "https://istore.kg/media/products/iPad-mini-WiFi-Purple.webp",
+      "category": "ipad"
     },
     {
       "id": 15,
       "title": "iPad 10.2",
       "price": "$350",
-      "image": "https://istore.kg/media/products/iPad-9-WiFi-Silver.webp"
+      "image": "https://istore.kg/media/products/iPad-9-WiFi-Silver.webp",
+      "category": "ipad"
     },
     {
       "id": 16,
